@@ -51,4 +51,4 @@ See [OBSERVATIONS.md](./OBSERVATIONS.md) for the full findings. The most importa
 
 UCP supports REST, MCP, and A2A transports with the same checkout logic. This implementation covers MCP (stdio).
 
-Compare with [acp-example](../acp-example/) for the REST transport version.
+Compare with [acp-example](https://github.com/goodmeta/acp-example) for the REST transport version.
