@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "minimumReleaseAge": "14 days",
+  "rangeStrategy": "bump",
+  "dependencyDashboard": true,
+  "schedule": [
+    "before 12:00 on Monday"
+  ],
+  "vulnerabilityAlerts": {
+    "minimumReleaseAge": null,
+    "schedule": [
+      "at any time"
+    ]
+  },
+  "packageRules": [
+    {
+      "description": "Own packages bypass min-age gate (testing own publishes)",
+      "matchPackagePrefixes": [
+        "@goodmeta/"
+      ],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Group non-major npm updates into one PR",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "non-major dependencies"
+    }
+  ]
+}
+
