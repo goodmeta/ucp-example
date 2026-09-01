@@ -1,0 +1,32 @@
+# Runs on EVERY push and pull request, unlike audit.yml, which is scoped to
+# dependency changes and a weekly cron. Without this a commit touching only
+# src/ ran no checks at all: nothing typechecked it, nothing built it, and
+# nothing ran the tests the repo already had. That is how these repos drift.
+#
+# Steps use `--if-present`, so this file is identical in every repo and does
+# whatever that repo actually defines. Adding a `test` or `typecheck` script is
+# all it takes for CI to start enforcing it here.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck --if-present
+      - name: Build
+        run: npm run build --if-present
+      - name: Test
+        run: npm test --if-present
