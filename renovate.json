@@ -4,7 +4,7 @@
     "config:recommended"
   ],
   "minimumReleaseAge": "14 days",
-  "rangeStrategy": "bump",
+  "rangeStrategy": "pin",
   "dependencyDashboard": true,
   "schedule": [
     "before 12:00 on Monday"
