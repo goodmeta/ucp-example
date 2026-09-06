@@ -1,6 +1,7 @@
 {
   "name": "@goodmeta/ucp-example",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "description": "Minimal UCP (Universal Commerce Protocol) merchant MCP server + agent client",
   "type": "module",
   "scripts": {
