@@ -22,10 +22,10 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4.4.0
+      - uses: actions/setup-node@v4.4.0
         with:
-          node-version: "20"
+          node-version: "20.20.2"
       - name: Audit (high severity gate)
         run: npm audit --audit-level=high
 
