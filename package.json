@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "22.19.17",
+    "@types/node": "26.6.5",
     "tsx": "4.22.2",
     "typescript": "6.0.3"
   },
