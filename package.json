@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/node": "22.19.17",
     "tsx": "4.22.2",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.29.0"
